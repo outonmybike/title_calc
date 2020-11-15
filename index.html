@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Real Advantage Title Insurance Agency</title>
+    <link
+      href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
+      rel="stylesheet"
+    />
+    <link href="./assets/css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!--NAV START-->
+        <!--NAV START-->
+    <header>
+      <div class="container">
+        <nav>
+          <div class="menu-icons">
+            <i class="icon ion-md-menu"></i>
+            <i class="icon ion-md-close"></i>
+          </div>
+          <a href="index.cshtml" class="logo">
+            <img src="./assets/img/logo.png" />
+          </a>
+          <ul class="nav-list">
+            <li>
+              <a href="index.cshtml">Home</a>
+            </li>
+            <li>
+              <a href="#"
+                >Buyers/Sellers <i class="icon ion-md-arrow-dropdown"></i
+              ></a>
+              <ul class="sub-menu">
+                <li>
+                  <a href="buyers.cshtml">Buyers</a>
+                </li>
+                <li>
+                  <a href="sellers.cshtml">Sellers</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="realtors.cshtml">Realtors</a>
+            </li>
+            <li>
+              <a href="lenders.cshtml">Lenders</a>
+            </li>
+            <li>
+              <a href="resources.cshtml">Resources <i class="icon ion-md-arrow-dropdown"></i></a>
+              <ul class="sub-menu">
+                <li>
+                  <a href="resources.cshtml#NOD">Notice of Default</a>
+                </li>
+                <!--<li>
+                  <a href="resources.cshtml#calc">Rate Calculator</a>
+                </li>-->
+              </ul>
+            </li>
+            <li>
+              <a href="about.cshtml">About</a>
+            </li>
+                <!-- <li>
+                  <a href="about.cshtml#locations"
+                    >Locations <i class="icon ion-md-arrow-dropdown"></i
+                  ></a>
+                  <ul class="last-sub-menu">
+                    <li>
+                      <a href="parkcity.cshtml">Park City</a>
+                    </li>
+                    <li>
+                      <a href="parkcitycorporate.cshtml">Park City Corporate</a>
+                    </li>
+                    <li>
+                      <a href="cottonwoodheights.cshtml">Cottonwood Heights</a>
+                    </li>
+                    <li>
+                      <a href="clearfield.cshtml">Clearfield</a>
+                    </li>
+                    <li>
+                      <a href="pleasantgrove.cshtml">Pleasant Grove</a>
+                    </li>
+                    <li>
+                      <a href="sugarhouse.cshtml">Sugarhouse</a>
+                    </li>
+                    <li>
+                      <a href="southvalley.cshtml">South Valley</a>
+                    </li>
+                  </ul>
+                </li> -->
+                <li>
+                  <a href="about.cshtml#locations">Locations <i class="icon ion-md-arrow-dropdown"></i></a>
+                  <ul class="sub-menu">
+                  <!--<ul class="last-sub-menu">-->
+                    <li>
+                      <a href="parkcity.cshtml">Park City</a>
+                    </li>
+                    <li>
+                      <a href="parkcitycorporate.cshtml">Park City Corporate</a>
+                    </li>
+                    <li>
+                      <a href="cottonwoodheights.cshtml">Cottonwood Heights</a>
+                    </li>
+                    <li>
+                      <a href="clearfield.cshtml">Clearfield</a>
+                    </li>
+                    <li>
+                      <a href="pleasantgrove.cshtml">Pleasant Grove</a>
+                    </li>
+                    <li>
+                      <a href="sugarhouse.cshtml">Sugar House</a>
+                    </li>
+                    <li>
+                      <a href="southvalley.cshtml">South Valley</a>
+                    </li>
+                  </ul>
+                </li>
+            <li class="move-right btn" id="loginButton">
+              <a href="#">Login</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+
+
+
+
+    <div id="loginModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span id="loginClose">&times;</span>
+    <form action="https://www.titleadvantage.com/ctclogin.asp?o=rta" method="post">
+    <label for="username" style="margin-top: 50px;"> Username </label>
+    <input name="username" type="text" id="username">
+    <label for="username"> Password </label>
+    <input type="password" name="password" id="password">
+    <input type="submit" value=" Login " class="btn"  >
+    <div class="btext" style="font-size:14px;">To create a free account,<br>click below:</div>
+    <input type="button" value=" Create Account " style="font-size:16px;" onclick="document.location.href='https://www.titleadvantage.com/newaccount.cshtml?o=rta';"/>
+    <a href="http://www.titleadvantage.com/pwreset.cshtml?o=rta" target="_blank" class="small-btn">Forgot password?</a>
+    <!-- Admin Login -->
+    <a href="https://www.titleadvantage.com/taadmin.asp" target="_blank" class="admin-login small-btn">Admin Login</a><BR />
+    </form>
+  </div>
+
+</div>
+
+<script>
+var loginButton = document.getElementById('loginButton');
+var loginModal = document.getElementById('loginModal');
+var loginClose = document.getElementById('loginClose');
+
+// When the user clicks on the button, open the modal
+loginButton.addEventListener('click', function() {
+  loginModal.style.display = "block";
+});
+
+// When the user clicks on <span> (x), close the modal
+loginClose.addEventListener('click', function() {
+  loginModal.style.display = "none";
+});
+
+// When the user clicks anywhere outside of the modal, close it
+window.addEventListener('click', function(event) {
+  if (event.target == loginModal) {
+    loginModal.style.display = "none";
+  }
+});
+</script>
+    <!--END NAV-->
+
+    <!-- BODY -->
+    <div class="subhero office-hero">
+      <div class="subhero-text">
+        <h1>
+          About Our <br><span class="orange">Pleasant Grove</span> Office
+        </h1>
+      </div>
+    </div>
+
+    <div class="greyback flex">
+      <div class="half buyer-intro">
+        <h2>
+         <span class="orange">Pleasant Grove</span> Information 
+        </h2> 
+        <div class="orange-line"></div>
+        <p>
+          1882 West Pleasant Grove Blvd.<br>
+          Suite G<br>
+          Pleasant Grove, UT 84062
+        </p>
+          
+          <p>Phone: (801) 701-0863</p>
+        
+      </div>
+      <div class="half office-img pleasantGrove-img"></div>
+    </div>
+
+    <div class="team darker-greyback">
+      <h2><span class="orange">Pleasant Grove</span> Team</h2>
+
+      <div class="team-person">
+        <div class="team-person-img-cont">
+          <img src="img/color-emp-photos/Misty Moore, Branch Manager & Escrow Officer.jpg" alt="Person Image">
+        </div>
+        <h3>Misty Moore</h3>
+        <p>Branch Manager & Escrow Officer</p>
+        <a href="mailto:Misty@RealAdvantageUtah.com">Misty@RealAdvantageUtah.com</a>
+        <a href="tel:1-801-701-0863">(801) 701-0863 ext.502</a>
+      </div>
+
+      <div class="team-person">
+        <div class="team-person-img-cont">
+          <img src="img/color-emp-photos/Annette Miller, Escrow Officer.jpg" alt="Person Image">
+        </div>
+        <h3>Annette Miller</h3>
+        <p>Escrow Officer</p>
+        <a href="mailto:Annette@RealAdvantageUtah.com">Annette@RealAdvantageUtah.com</a>
+        <a href="tel:1-801-701-0863">(801) 701-0863 ext.503</a>
+      </div>
+
+      <div class="team-person">
+        <div class="team-person-img-cont">
+          <img src="img/color-emp-photos/nophoto.jpg" alt="Person Image">
+        </div>
+        <h3>Amanda Ashby</h3>
+        <p>Escrow Officer</p>
+        <a href="mailto:AmandaA@RealAdvantageUtah.com">AmandaA@RealAdvantageUtah.com</a>
+        <a href="tel:1-801-701-0863">(801) 701-0863 ext.506</a>
+      </div>
+
+      <div class="team-person">
+        <div class="team-person-img-cont">
+          <img src="img/color-emp-photos/nophoto.jpg" alt="Person Image">
+        </div>
+        <h3>Shayla Murr</h3>
+        <p>Escrow Assistant</p>
+        <a href="mailto:ShaylaM@RealAdvantageUtah.com">ShaylaM@RealAdvantageUtah.com</a>
+        <a href="tel:1-801-701-0863">(801) 701-0863 ext.505</a>
+      </div>
+
+      <div class="team-person">
+        <div class="team-person-img-cont">
+          <img src="img/color-emp-photos/nophoto.jpg" alt="Person Image">
+        </div>
+        <h3>Angie Bernsten</h3>
+        <p>Escrow Assistant</p>
+        <a href="mailto:AngieB@RealAdvantageUtah.com">AngieB@RealAdvantageUtah.com</a>
+        <a href="tel:1-801-701-0863">(801) 701-0863 ext.507</a>
+      </div>
+
+      <div class="team-person">
+        <div class="team-person-img-cont">
+          <img src="img/color-emp-photos/Leesa Jones, Escrow Assistant.jpg" alt="Person Image">
+        </div>
+        <h3>Leesa Jones</h3>
+        <p>Escrow Assistant</p>
+        <a href="mailto:LeesaJ@RealAdvantageUtah.com">LeesaJ@RealAdvantageUtah.com</a>
+        <a href="tel:1-801-701-0863">(801) 701-0863 ext.500</a>
+      </div>
+
+      <div class="team-person">
+        <div class="team-person-img-cont">
+          <img src="img/color-emp-photos/Patrick Perrett, Business Developer.jpg" alt="Person Image">
+        </div>
+        <h3>Patrick Perrett</h3>
+        <p>Business Developer</p>
+        <a href="mailto:PatrickP@RealAdvantageUtah.com">PatrickP@RealAdvantageUtah.com</a>
+        <a href="tel:1-801-616-1234">(801) 616-1234</a>
+      </div>
+
+      <div class="team-person">
+        <div class="team-person-img-cont">
+          <img src="img/color-emp-photos/nophoto.jpg" alt="Person Image">
+        </div>
+        <h3>Victoria Morrell</h3>
+        <p>Administrative Assistant</p>
+        <a href="mailto:VictoriaM@RealAdvantageUtah.com">VictoriaM@RealAdvantageUtah.com</a>
+        <a href="tel:1-801-701-0863">(801) 701-0863</a>
+      </div>
+
+      <div class="team-person">
+        <div class="team-person-img-cont">
+          <img src="img/color-emp-photos/nophoto.jpg" alt="Person Image">
+        </div>
+        <h3>Juli Jensen</h3>
+        <p>Escrow Assistant</p>
+        <a href="mailto:JuliJ@RealAdvantageUtah.com">JuliJ@RealAdvantageUtah.com</a>
+        <a href="tel:1-801-701-0863">(801) 701-0863 ext. 501</a>
+      </div>
+
+    </div>
+
+    <!-- FOOTER START -->
+    <footer>
+      <div class="social-media">
+      <p style="padding: 0;">Check Us Out on Social Media</p>
+        <a href="https://www.instagram.com/realadvantagetitle/" target="_blank"><img src="img/instagram.png" alt="instagram"></a>
+        <a href="https://www.facebook.com/realadvantageutah" target="_blank"><img src="img/facebook.png" alt="facebook"></a>
+        <!-- <a href="https://www.linkedin.com/company/real-advantage-title-insurance-company/about/" target="_blank"><img src="img/linkedin.png" alt="linkedin"></a> -->
+
+      </div>
+
+      <div class="footer-locations-cont">
+        <h3>Locations</h3>
+        <div class="footer-location-links">
+           <a href="parkcity.cshtml">Park City</a>
+           <a href="parkcitycorporate.cshtml">Park City Corporate</a>
+           <a href="cottonwoodheights.cshtml">Cottonwood Heights</a>
+           <a href="clearfield.cshtml">Clearfield</a>
+           <a href="pleasantgrove.cshtml">Pleasant Grove</a>
+           <a href="sugarhouse.cshtml">Sugar House</a>
+           <a href="southvalley.cshtml">South Valley</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-16356774-5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-16356774-5');
+</script>
+    <!-- FOOTER END -->
+
+    <script src="scripts.js"></script>
+  <script async type="text/javascript" src="/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1879287252"></script>
+</body>
+</html>
